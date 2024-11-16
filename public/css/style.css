@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Menerapkan font Roboto ke semua elemen */
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Menerapkan font Roboto pada body */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.header {
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #000;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FFD700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    border-radius: 4px;
+}
+
+.submenu a {
+    display: block;
+    padding: 8px 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.submenu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* Account dropdown menu */
+.account-dropdown {
+    position: relative;
+}
+
+.account-icon,
+.menu-icon {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    /* Hapus border-radius untuk bentuk kotak */
+    border-radius: 8px;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.account-icon:hover,
+.menu-icon:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.account-submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #FFD700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px 0;
+    min-width: 150px;
+}
+
+.account-submenu a,
+.account-submenu button {
+    display: block;
+    padding: 8px 20px;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-weight: normal;
+    width: 100%;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.account-submenu a:hover,
+.account-submenu button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Display submenu on hover */
+.account-dropdown:hover .account-submenu {
+    display: block;
+}
+
+
+.galeri-container {
+    max-width: 800px;
+    margin: 32px auto 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.galeri-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.galeri-create-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.galeri-post-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.galeri-post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.galeri-post-header h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #555;
+}
+
+.galeri-edit-btn {
+    background-color: #ffc107;
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.galeri-edit-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.galeri-post-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.galeri-post-content {
+    margin-top: 15px;
+}
+
+.galeri-post-content h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.galeri-post-content p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.galeri-author-info {
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+}
+
+.galeri-read-more-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+}
