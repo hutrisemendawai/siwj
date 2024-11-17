@@ -7,7 +7,7 @@
             <!-- Chat Messages -->
             @foreach($messages as $message)
                 <div class="chat-message {{ $message->user->id == auth()->id() ? 'chat-message-sent' : 'chat-message-received' }}">
-                    <img src="{{ $message->user->profile_photo ? asset('storage/profile_photos/' . $message->user->profile_photo) : asset('storage/profile_photos/default.jpg') }}" 
+                    <img src="{{ $message->user->profile_photo ? asset('storage/' . $message->user->profile_photo) : asset('storage/profile_photos/default.jpg') }}" 
                          alt="{{ $message->user->name }}" 
                          class="chat-profile-image">
                     <div class="chat-message-content">
@@ -69,7 +69,7 @@
                     console.log('Message received:', e);
                     chatMessages.innerHTML += `
                         <div class="chat-message ${e.user.id == {{ auth()->id() }} ? 'chat-message-sent' : 'chat-message-received'}">
-                            <img src="${e.user.profile_photo ? '/storage/profile_photos/' + e.user.profile_photo : '/storage/profile_photos/default.jpg'}" 
+                            <img src="${e.user.profile_photo ? '/storage/' + e.user.profile_photo : '/storage/profile_photos/default.jpg'}" 
                                  alt="${e.user.name}" 
                                  class="chat-profile-image">
                             <div class="chat-message-content">

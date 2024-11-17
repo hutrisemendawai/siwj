@@ -5,7 +5,7 @@
         <!-- Profile Sidebar -->
         <aside class="discussion-profile-sidebar">
             <div class="discussion-profile-card">
-                <img src="{{ auth()->user()->profile_photo ? asset('storage/profile_photos/' . auth()->user()->profile_photo) : asset('storage/profile_photos/default.jpg') }}" 
+                <img src="{{ auth()->user()->profile_photo ? asset('storage/' . auth()->user()->profile_photo) : asset('storage/profile_photos/default.jpg') }}" 
                      alt="{{ auth()->user()->name }}" 
                      class="discussion-profile-image">
                 <h3 class="discussion-profile-name">{{ auth()->user()->name }}</h3>
@@ -33,7 +33,7 @@
             @foreach($discussions as $discussion)
                 <div class="discussion-post-card">
                     <div class="discussion-post-header">
-                        <img src="{{ $discussion->user->profile_photo ? asset('storage/profile_photos/' . $discussion->user->profile_photo) : asset('storage/profile_photos/default.jpg') }}" 
+                        <img src="{{ $discussion->user->profile_photo ? asset('storage/' . $discussion->user->profile_photo) : asset('storage/profile_photos/default.jpg') }}" 
                              alt="{{ $discussion->user->name }}" 
                              class="discussion-post-user-image">
                         <div>
@@ -53,7 +53,7 @@
                         <span class="discussion-comments-count">{{ $discussion->comments->count() }} Comments</span>
                         @foreach($discussion->comments as $comment)
                             <div class="discussion-comment">
-                                <img src="{{ $comment->user->profile_photo ? asset('storage/profile_photos/' . $comment->user->profile_photo) : asset('storage/profile_photos/default.jpg') }}" 
+                                <img src="{{ $comment->user->profile_photo ? asset('storage/' . $comment->user->profile_photo) : asset('storage/profile_photos/default.jpg') }}" 
                                      alt="{{ $comment->user->name }}" 
                                      class="discussion-comment-user-image">
                                 <div>

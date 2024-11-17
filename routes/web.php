@@ -10,10 +10,11 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ChatController;
 use App\Http\Controllers\BlogController;
 
-// Webhook Verification and Event Handling
-Route::get('/facebook/webhook', [BlogController::class, 'verifyWebhook']);
-Route::post('/facebook/webhook', [BlogController::class, 'handleWebhook']);
+// Route untuk verifikasi webhook Facebook
+Route::get('/facebook/webhook', [BlogController::class, 'verifyWebhook'])->name('facebook.webhook.verify');
 
+// Route untuk menangani webhook Facebook
+Route::post('/facebook/webhook', [BlogController::class, 'handleWebhook'])->name('facebook.webhook.handle');
 // Blog Routes
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index'); // Blog listing
 Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create'); // Blog create form

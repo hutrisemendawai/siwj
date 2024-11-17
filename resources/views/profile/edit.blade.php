@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-        <img src="{{ $profilePhoto = auth()->user()->profile_photo ? asset('storage/profile_photos/' . auth()->user()->profile_photo) : asset('storage/profile_photos/default.jpg') }}" 
+        <img src="{{ $profilePhoto = auth()->user()->profile_photo ? asset('storage/' . auth()->user()->profile_photo) : asset('storage/profile_photos/default.jpg') }}" 
      alt="Profile Photo" 
      class="profile-photo">
 

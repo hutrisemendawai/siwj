@@ -5,7 +5,7 @@
         <!-- Discussion Details -->
         <div class="discussion-details-card">
             <div class="discussion-details-header">
-                <img src="{{ $discussion->user->profile_photo ? asset('storage/profile_photos/' . $discussion->user->profile_photo) : asset('storage/profile_photos/default.jpg') }}" 
+                <img src="{{ $discussion->user->profile_photo ? asset('storage/' . $discussion->user->profile_photo) : asset('storage/profile_photos/default.jpg') }}" 
                      alt="{{ $discussion->user->name }}" 
                      class="discussion-details-user-image">
                 <div>
@@ -31,7 +31,7 @@
         @forelse($discussion->comments as $comment)
             <div class="discussion-comment-card">
                 <div class="discussion-comment-header">
-                    <img src="{{ $comment->user->profile_photo ? asset('storage/profile_photos/' . $comment->user->profile_photo) : asset('storage/profile_photos/default.jpg') }}" 
+                    <img src="{{ $comment->user->profile_photo ? asset('storage/' . $comment->user->profile_photo) : asset('storage/profile_photos/default.jpg') }}" 
                          alt="{{ $comment->user->name }}" 
                          class="discussion-comment-user-image">
                     <div>
